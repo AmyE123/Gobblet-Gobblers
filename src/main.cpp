@@ -1,16 +1,14 @@
 #include <SFML/Graphics.hpp>
+#include <iostream>
 #include "Inception-Engine/_config.h"
+#include "Components/Board.h"
 
 int main()
 {
+    Board _board;
+
     // Create the main window
     sf::RenderWindow window(sf::VideoMode(config::window_size[0], config::window_size[1]), config::window_title);
-
-    // Load a sprite to display
-    sf::Texture texture;
-    if (!texture.loadFromFile(config::textures_file_route + "Inception-Engine-Logo-Cropped.png"))
-        return EXIT_FAILURE;
-    sf::Sprite sprite(texture);
 
     // Create a graphical text to display
     sf::Font font;
@@ -37,9 +35,10 @@ int main()
                 window.close();
         }
         // Clear screen
-        window.clear();
-        // Draw the sprite
-        window.draw(sprite);
+        window.clear(sf::Color(236, 240, 241, 255));
+
+        _board.DrawBoard(window);
+
         // Draw the string
         window.draw(text);
         // Update the window
