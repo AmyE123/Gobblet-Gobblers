@@ -4,8 +4,8 @@
 namespace config
 {
 #pragma region Window_Properties
-    std::string window_title = "Inception Engine";
-    std::vector<int> window_size {1024, 768};
+    std::string window_title = "Gobblet Gobblers";
+    std::vector<int> window_size {500, 400};
 #pragma endregion Window_Properties
 
 #pragma region Default_File_Routes
