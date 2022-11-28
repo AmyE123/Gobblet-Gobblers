@@ -5,9 +5,21 @@
 class Board : public Entity
 {
 public:
+	/// <summary>
+	/// Board constructor
+	/// </summary>
 	Board();
+
+	/// <summary>
+	/// Board deconstructor
+	/// </summary>
+	~Board() {};
+
+	/// <summary>
+	/// Draw the full board to the window
+	/// </summary>
+	/// <param name="window"></param>
 	void DrawBoard(sf::RenderWindow& window);
-	void Draw(sf::RenderWindow& window);
 
 private:
 	const int BOARD_SIZE = 2;
@@ -17,4 +29,6 @@ private:
 
 	sf::Texture boardTexture;
 	sf::Sprite boardSprite;
+
+	void Draw(sf::RenderWindow& window);
 };
