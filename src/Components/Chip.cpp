@@ -6,7 +6,7 @@ Chip::Chip()
 
 	chipSprite = Sprite::GetSprite();
 
-	SetChipPosition();
+	SetChipPosition(0,0);
 }
 
 Chip::~Chip()
@@ -14,7 +14,7 @@ Chip::~Chip()
 	Sprite::~Sprite();
 }
 
-void Chip::SetChipPosition()
+void Chip::SetChipPosition(int xOffset, int yOffset)
 {
-	//chipSprite.setPosition(10, 10);
+	Sprite::SetPosition(335 + (125 * xOffset), 250 + (120 * yOffset));
 }

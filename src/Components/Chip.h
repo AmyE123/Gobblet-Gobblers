@@ -6,7 +6,7 @@ public:
 	Chip();
 	~Chip();
 
-	void SetChipPosition();
+	void SetChipPosition(int xOffset, int yOffset);
 private:
 	sf::String spriteName = "Chip.png";
 	sf::Texture chipTexture;

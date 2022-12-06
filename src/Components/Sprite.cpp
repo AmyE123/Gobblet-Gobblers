@@ -42,7 +42,6 @@ void Sprite::Init()
 {
 	SetSprite(spriteAssetDirectoryRoot);
 	SetOrigin();
-	SetPosition();
 }
 
 void Sprite::DrawSprite(sf::RenderWindow& window)
@@ -57,10 +56,9 @@ void Sprite::SetOrigin()
 	sprite.setOrigin(size.x / 2, size.y / 2);
 }
 
-void Sprite::SetPosition()
+void Sprite::SetPosition(int x, int y)
 {
-	// 250, 200 is in top lefthand corner
-	sprite.setPosition(250, 200);
+	sprite.setPosition(x, y);
 }
 
 sf::Texture Sprite::GetTexture()

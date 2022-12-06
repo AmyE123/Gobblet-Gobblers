@@ -31,6 +31,8 @@ public:
 	/// <param name="assetDir">The directory of the asset, if not set will be missing texture</param>
 	void SetAssetDirectory(std::string assetDirectory);
 
+	void SetPosition(int x, int y);
+
 protected:
 	sf::Texture GetTexture();
 
@@ -45,6 +47,4 @@ private:
 	bool IsValidSprite(std::string assetDirectory);
 	virtual void SetSprite(std::string spriteFileName);
 	void SetOrigin();
-	void SetPosition();
-
 };
