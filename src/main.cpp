@@ -21,7 +21,7 @@ int main()
 
     // Set the logo for the game
     sf::Image image;
-    if (!image.loadFromFile(config::textures_file_route + "chip.png"))
+    if (!image.loadFromFile(config::textures_file_route + "logo.png"))
         return EXIT_FAILURE;
     window.setIcon(image.getSize().x, image.getSize().y, image.getPixelsPtr());
 
