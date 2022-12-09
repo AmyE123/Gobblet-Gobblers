@@ -7,7 +7,7 @@ Sprite::Sprite()
 
 Sprite::~Sprite()
 {
-
+	//Empty destructor
 }
 
 bool Sprite::IsValidSprite(std::string assetDirectory)

@@ -1,20 +1,20 @@
-#include "Chip.h"
+#include "Gobblet.h"
 
-Chip::Chip()
+Gobblet::Gobblet()
 {
-	SetChipSize(2);
+	SetSize(0);
 
-	SetChipPosition(0,2);
+	SetBoardPosition(0,2);
 
 	Sprite::SetAssetDirectory(spriteName);
 }
 
-Chip::~Chip()
+Gobblet::~Gobblet()
 {
 	Sprite::~Sprite();
 }
 
-void Chip::SetChipPosition(int xOffset, int yOffset)
+void Gobblet::SetBoardPosition(int xOffset, int yOffset)
 {
 	//300, 210 = left top
 	//432, 342 = mid mid
@@ -25,16 +25,16 @@ void Chip::SetChipPosition(int xOffset, int yOffset)
 	Sprite::SetPosition(300 + (132 * xOffset), 210 + (132 * yOffset));
 }
 
-void Chip::SetChipSize(int sizeIndex)
+void Gobblet::SetSize(int sizeIndex)
 {
-	chipSize = sizeIndex;
+	gobbletSize = sizeIndex;
 
 	std::string name = "size_" + std::to_string(sizeIndex);
 	std::string fileExt = ".png";
 	spriteName = name + fileExt;
 }
 
-int Chip::GetChipSize()
+int Gobblet::GetSize()
 {
-	return chipSize;
+	return gobbletSize;
 }

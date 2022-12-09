@@ -2,12 +2,12 @@
 #include <iostream>
 #include "Inception-Engine/_config.h"
 #include "Components/Board.h"
-#include "Components/Chip.h"
+#include "Components/Gobblet.h"
 
 int main()
 {
     Board _board;
-    Chip _chip;
+    Gobblet _gobblet;
 
     // Create the main window
     sf::RenderWindow window(sf::VideoMode(config::window_size[0], config::window_size[1]), config::window_title);
@@ -41,7 +41,7 @@ int main()
 
         _board.DrawBoard(window);
 
-        _chip.DrawSprite(window);
+        _gobblet.DrawSprite(window);
 
         // Draw the string
         window.draw(text);

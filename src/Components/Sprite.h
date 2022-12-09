@@ -15,7 +15,7 @@ public:
 	Sprite();
 
 	/// <summary>
-	/// The sprite deconstructor
+	/// The sprite destructor
 	/// </summary>
 	~Sprite();
 
