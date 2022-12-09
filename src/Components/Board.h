@@ -11,7 +11,7 @@ public:
 	Board();
 
 	/// <summary>
-	/// Board deconstructor
+	/// Board destructor
 	/// </summary>
 	~Board() {};
 

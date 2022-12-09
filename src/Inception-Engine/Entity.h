@@ -1,3 +1,4 @@
+#pragma once
 #include <SFML/Graphics.hpp>
 
 class Entity
@@ -16,7 +17,7 @@ public:
 	virtual void Draw(sf::RenderWindow& window, sf::Sprite& sprite);
 
 	/// <summary>
-	/// Entity deconstructor
+	/// Entity destructor
 	/// </summary>
 	virtual ~Entity() {};
 };

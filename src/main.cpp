@@ -2,10 +2,12 @@
 #include <iostream>
 #include "Inception-Engine/_config.h"
 #include "Components/Board.h"
+#include "Components/Gobblet.h"
 
 int main()
 {
     Board _board;
+    Gobblet _gobblet;
 
     // Create the main window
     sf::RenderWindow window(sf::VideoMode(config::window_size[0], config::window_size[1]), config::window_title);
@@ -19,7 +21,7 @@ int main()
 
     // Set the logo for the game
     sf::Image image;
-    if (!image.loadFromFile(config::textures_file_route + "Inception-Engine-Logo.png"))
+    if (!image.loadFromFile(config::textures_file_route + "logo.png"))
         return EXIT_FAILURE;
     window.setIcon(image.getSize().x, image.getSize().y, image.getPixelsPtr());
 
@@ -38,6 +40,8 @@ int main()
         window.clear(sf::Color(236, 240, 241, 255));
 
         _board.DrawBoard(window);
+
+        _gobblet.DrawSprite(window);
 
         // Draw the string
         window.draw(text);
