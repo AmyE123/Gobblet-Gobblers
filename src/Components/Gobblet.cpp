@@ -2,11 +2,11 @@
 
 Gobblet::Gobblet()
 {
-	SetSize(0);
-
+	//TESTS
+	SetSize(1);
 	SetBoardPosition(0,2);
 
-	Sprite::SetAssetDirectory(spriteName);
+	Sprite::SetAssetDirectory(_spriteName);
 }
 
 Gobblet::~Gobblet()
@@ -16,25 +16,19 @@ Gobblet::~Gobblet()
 
 void Gobblet::SetBoardPosition(int xOffset, int yOffset)
 {
-	//300, 210 = left top
-	//432, 342 = mid mid
-
-	// X DIFF = 132
-	// Y DIFF = 132
-
-	Sprite::SetPosition(300 + (132 * xOffset), 210 + (132 * yOffset));
+	Sprite::SetPosition(BOARD_X + (PADDING_SIZE * xOffset), BOARD_Y + (PADDING_SIZE * yOffset));
 }
 
 void Gobblet::SetSize(int sizeIndex)
 {
-	gobbletSize = sizeIndex;
+	_gobbletSize = sizeIndex;
 
-	std::string name = "size_" + std::to_string(sizeIndex);
+	std::string name = GOBBLET_FILE_PREFIX + std::to_string(sizeIndex);
 	std::string fileExt = ".png";
-	spriteName = name + fileExt;
+	_spriteName = name + fileExt;
 }
 
 int Gobblet::GetSize()
 {
-	return gobbletSize;
+	return _gobbletSize;
 }

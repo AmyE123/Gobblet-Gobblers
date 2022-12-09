@@ -35,8 +35,13 @@ public:
 	/// <returns>The size of the gobblet</returns>
 	int GetSize();
 private:
-	sf::String spriteName = "size_";
-	sf::Texture gobbletTexture;
-	sf::Sprite gobbletSprite;
-	int gobbletSize = 0;
+	const int PADDING_SIZE = 132;
+	const int BOARD_X = 300;
+	const int BOARD_Y = 210;
+	const std::string FILE_EXT = ".png";
+	const std::string GOBBLET_FILE_PREFIX = "size_";
+	
+	sf::Sprite _gobbletSprite;
+	sf::String _spriteName;
+	int _gobbletSize = 0;
 };
