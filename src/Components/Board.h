@@ -2,6 +2,9 @@
 #include "../Inception-Engine/Entity.h"
 #include <iostream>
 
+/// <summary>
+/// The board class, deals with drawing the full board out for the game.
+/// </summary>
 class Board : public Entity
 {
 public:
