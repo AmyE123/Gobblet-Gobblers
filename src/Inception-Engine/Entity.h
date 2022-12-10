@@ -1,6 +1,9 @@
 #pragma once
 #include <SFML/Graphics.hpp>
 
+/// <summary>
+/// The entity base class, should be used for all component types.
+/// </summary>
 class Entity
 {
 public:
